@@ -1,0 +1,45 @@
+Linear PCA, LDA, Lap:
+
+ATnTDataSet:
+5: is the k folds
+we will enter the dimension while prog execution.
+change to PCA LDA or Lap 
+
+AlgLinRegression(5, 'C:\Users\Patel\Desktop\DataMining\Final Demo All Projects\Project 4\PCD_LDA_Laplasian\ATnTDataSet.txt');
+
+HandWritten:
+AlgLinRegression_HandWritten(5, 'C:\Users\Patel\Desktop\DataMining\Final Demo All Projects\Project 4\PCD_LDA_Laplasian\HandWritten');
+
+
+Centroid PCA, LDA, Lap:
+
+5: is the k folds
+we will enter the dimension while prog execution.
+change to PCA LDA or Lap 
+change to diff dataset also inside
+
+ATnTDataSet:
+CentroidClassification(5, 'C:\Users\Patel\Desktop\DataMining\Final Demo All Projects\Project 4\PCD_LDA_Laplasian\ATnTDataSet.txt');
+
+HandWrittenDataSet:
+CentroidClassification(5, 'C:\Users\Patel\Desktop\DataMining\Final Demo All Projects\Project 4\PCD_LDA_Laplasian\HandWritten');
+
+
+KNN:
+
+ATnTDataSet:
+PCA: KNN_KFOLD_ATNT_PCA(5, 'C:\Users\Patel\Desktop\DataMining\Final Demo All Projects\Project 4\PCD_LDA_Laplasian\ATnTDataSet.txt');
+
+LDA :  KNN_KFOLD_HandWritten_LDA(5, 'C:\Users\Patel\Desktop\DataMining\Final Demo All Projects\Project 4\PCD_LDA_Laplasian\ATnTDataSet.txt');
+
+Lap : Directly exceute the file changing the file path and Kfold program next line to it. enter the value of dimension inside.
+
+
+HandWrittenDataSet:
+PCA: KNN_KFOLD_HandWritten_PCA(5, 'C:\Users\Patel\Desktop\DataMining\Final Demo All Projects\Project 4\PCD_LDA_Laplasian\ATnTDataSet.txt');
+
+LDA :  KNN_KFOLD_HandWritten_LDA(5, 'C:\Users\Patel\Desktop\DataMining\Final Demo All Projects\Project 4\PCD_LDA_Laplasian\ATnTDataSet.txt');
+
+Lap : Directly exceute the file changing the file path and Kfold program next line to it. enter the value of dimension inside.
+
+

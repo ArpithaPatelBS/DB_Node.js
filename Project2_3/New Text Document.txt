@@ -1,0 +1,35 @@
+KNN KFOLD:
+
+KNN(number_of_folds, 'filepath');
+
+ATnTDataSet:
+KNN_KFOLD(5 , 'C:\Users\Patel\Desktop\DataMining\Final Demo All Projects\Project2_3\ATnTDataSet.txt');
+
+
+HandWritten:
+KNN_KFOLD_HandWritten(5 , 'C:\Users\Patel\Desktop\DataMining\Final Demo All Projects\Project2_3\HandWrittenDataSet.txt');
+
+
+Centroid KFOLD:
+
+
+ATnTDatSet:
+
+CentroidClassification(5 , 'C:\Users\Patel\Desktop\DataMining\Final Demo All Projects\Project2_3\ATnTDataSet.txt');
+
+
+HandWritten:
+
+CentroidClassification_HandWritten(5 , 'C:\Users\Patel\Desktop\DataMining\Final Demo All Projects\Project2_3\HandWrittenDataSet.txt');
+
+
+Linear KFOLD:
+
+ATnTDatSet
+
+AlgLinRegression(5 , 'C:\Users\Patel\Desktop\DataMining\Final Demo All Projects\Project2_3\ATnTDataSet.txt');
+
+
+HandWritten:
+
+AlgLinRegression_HandWritten(5 , 'C:\Users\Patel\Desktop\DataMining\Final Demo All Projects\Project2_3\HandWrittenDataSet.txt');

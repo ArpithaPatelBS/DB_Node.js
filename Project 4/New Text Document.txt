@@ -1,0 +1,30 @@
+FStatistics ATnT:
+
+ 
+F_Statistics(10, 'C:\Users\Patel\Desktop\DataMining\Final Demo All Projects\Project 4\ATnTDataSet.txt');
+
+uncomment the specific classification.
+10 is the dimension.
+
+
+F Statistics HandWritten:
+
+FStatistics_HandWritten(10, 'C:\Users\Patel\Desktop\DataMining\Final Demo All Projects\Project 4\HandWrittenDataSet.txt');
+
+uncomment the specific classification.
+10 is the dimension.
+
+
+CMD ATnT:
+
+
+CMD(10, 'C:\Users\Patel\Desktop\DataMining\Final Demo All Projects\Project 4\ATnTDataSet.txt');
+
+uncomment the specific classification.
+10 is the dimension.
+
+
+CMD HandWritten:
+
+CMD_HandWritten(10, 'C:\Users\Patel\Desktop\DataMining\Final Demo All Projects\Project 4\HandWrittenDataSet.txt');
+10 is the dimension.
