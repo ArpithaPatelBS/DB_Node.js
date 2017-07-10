@@ -1,0 +1,161 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <title>Database Systems</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="css2/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="offcanvas.css" rel="stylesheet">
+
+
+
+	 <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!--Placed at the end of the document so the pages load faster -->
+
+
+    <script src="http://localhost:4444/socket.io/socket.io.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+
+
+	<script src="addSubscription.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <script src="offcanvas.js"></script>
+
+
+
+
+
+  </head>
+	<body>
+
+	  <nav class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Home</a>
+        </div>
+
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <div class="row row-offcanvas row-offcanvas-right">
+
+        <div class="col-xs-12 col-sm-15" id ="tab123">
+          <p class="pull-right visible-xs">
+            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
+          </p>
+		  <div class="jumbotron">
+            <h1>Add Subscription!</h1>
+
+          </div>
+
+
+			<form class="form-horizontal" role="form">
+				<div class="form-group">
+				  <label class="control-label col-sm-2" for="name">Choose Customer:</label>
+				  <div class="col-sm-10">
+					<select class="form-control" name="" id="customer-name">
+					</select>
+				  </div>
+				</div>
+
+				<div class="form-group">
+				  <label class="control-label col-sm-2" for="name">Choose Publication:</label>
+				  <div class="col-sm-10">
+					<select class="form-control" name="" id="pub-name">
+
+					</select>
+				  </div>
+				</div>
+
+				<div class="form-group">
+				  <label class="control-label col-sm-2" for="name">Choose Type:</label>
+				  <div class="col-sm-10">
+					<select class="form-control" name="" id="type-name">
+						<option>Please Select</option>
+						<option value="Magazine">Magazine</option>
+						<option value="Newspaper">Newspaper</option>
+					</select>
+				  </div>
+				</div>
+
+				<div class="form-group" id='form-news-mag' style='display:none;'>
+				  <label class="control-label col-sm-2" for="name">Choose Magazine/Newspaper:</label>
+				  <div class="col-sm-10">
+					<select class="form-control" name="" id="mag-news-name">
+
+					</select>
+				  </div>
+				</div>
+
+				<div class="form-group" id='form-rate-issue-mag' style='display:none;'>
+				  <label class="control-label col-sm-2" for="name">Choose Rate - No. of Issues/ No. Of Months:</label>
+				  <div class="col-sm-10">
+					<select class="form-control" name="" id="rate-issue-name">
+						<option>Please Select</option>
+					</select>
+				  </div>
+				</div>
+				<div class="form-group">
+				  <label class="control-label col-sm-2" for="name">Start Date:</label>
+				  <div class="col-sm-10">
+					<input type="input" class="form-control"  style="width:600px;" id="start-date" placeholder="Enter new start date">
+				  </div>
+				</div>
+				<div class="form-group">
+				  <label class="control-label col-sm-2" for="name">End Date:</label>
+				  <div class="col-sm-10">
+					<input type="input" class="form-control"  style="width:600px;" id="end-date" placeholder="Enter new end date">
+				  </div>
+				</div>
+
+		    </form>
+			<div class="msgBar" id="divErrorStatus">
+				<p class="errorMsg"><i></i><span id="divErrorMsg"></span></p>
+			</div>
+			<div class="submit-button">
+				  <div class="col-sm-offset-2 col-sm-10">
+					<button type="button" id="buttonSubscriptionAdd" class="btn btn-primary">Submit</button>
+				  </div>
+			</div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <footer>
+        <p>&copy; 2016 Arpitha-Aishwarya, Inc.</p>
+      </footer>
+
+    </div>
+
+
+
+	</body>
+</html>
