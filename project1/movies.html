@@ -1,0 +1,34 @@
+e(' ',''), int(self.serverPortVar.get().replace(' ','')))
+    Fileserveraddr = (self.serverIPVar.get().replace(' ',''), 9000)
+    try:
+        self.serverSoc = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        self.serverSoc.bind(serveraddr)
+        self.serverSoc.listen(5)
+
+        self.FileserverSoc = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        self.FileserverSoc.bind(Fileserveraddr)
+        self.FileserverSoc.listen(5)
+        self.setStatus("Server listening on %s:%s" % serveraddr)
+        self.setStatus(" File Server listening on %s:%s" % Fileserveraddr)
+        thread.start_new_thread(self.listenClients,())
+        thread.start_new_thread(self.listenFileClients,())
+        
+        
+        self.serverStatus = 1
+        self.name = self.nameVar.get().replace(' ','')
+        if self.name == '':
+            self.name = "%s:%s" % serveraddr
+    except:
+        self.setStatus("Error setting up server")
+    
+  def listenClients(self):
+    while 1:
+      clientsoc, clientaddr = self.serverSoc.accept()
+      self.setStatus("Client connected from %s:%s" % clientaddr)
+      self.addClient(clientsoc, clientaddr)
+
+      thread.start_new_thread(self.handleIncomingFilePaths, (clientsoc, clientaddr))
+
+      
+      
+    self.serverSoc.clo

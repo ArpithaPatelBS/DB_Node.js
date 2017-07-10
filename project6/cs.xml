@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE College [
+<!ELEMENT College (instructor+, department+, course+ )>
+<!ELEMENT instructor (name, address, salary, rank, degrees*)>
+<!ATTLIST instructor ssn  ID #REQUIRED>
+<!ATTLIST instructor depno IDREF #REQUIRED>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT address (street, zipcode)>
+<!ELEMENT street (#PCDATA)>
+<!ELEMENT zipcode (#PCDATA)>
+<!ELEMENT salary (#PCDATA)>
+<!ELEMENT rank (#PCDATA)>
+<!ELEMENT degrees (#PCDATA)>
+<!ELEMENT department (name)>
+<!ATTLIST department depno ID #REQUIRED>
+<!ATTLIST department headssn IDREF #REQUIRED>
+<!ELEMENT course (name, hasprequisities*)>
+<!ATTLIST course code ID #REQUIRED>
+<!ATTLIST course instructorssn IDREF #REQUIRED>
+<!ATTLIST course depno IDREF #REQUIRED>
+<!ATTLIST hasprequisities code IDREF #REQUIRED>
+<!ELEMENT hasprequisities EMPTY>
+]>
+<College>
+	<instructor ssn="SSN1" depno="DEP100">
+		<name>Ramez Elmasri</name>
+		<address>
+			<street>UTA Boulevard</street>
+			<zipcode>76013</zipcode>
+		</address>
+		<salary>12000</salary>
+		<rank>1</rank>
+		<degrees>BS</degrees>
+		<degrees>MS</degrees>
+		<degrees>Phd</degrees>	
+	</instructor>
+	<instructor ssn="SSN2" depno="DEP200">
+		<name>K R Rao</name>
+		<address>
+			<street>UTA Boulevard</street>
+			<zipcode>76013</zipcode>
+		</address>
+		<salary>12000</salary>
+		<rank>1</rank>
+		<degrees>BS</degrees>
+		<degrees>MS</degrees>
+		<degrees>Phd</degrees>	
+	</instructor>
+	<instructor ssn="SSN3" depno="DEP100">
+		<name>Leonidas Fegaras</name>
+		<address>
+			<street>UTA Boulevard</street>
+			<zipcode>76013</zipcode>
+		</address>
+		<salary>11000</salary>
+		<rank>2</rank>
+		<degrees>MS</degrees>
+		<degrees>Phd</degrees>	
+	</instructor>
+	<instructor ssn="SSN4" depno="DEP100">
+		<name>Bahram Khalili</name>
+		<address>
+			<street>UTA Boulevard</street>
+			<zipcode>76013</zipcode>
+		</address>
+		<salary>10000</salary>
+		<rank>3</rank>
+	</instructor>
+	<department depno="DEP100" headssn="SSN1">
+		<name>Computer science</name>
+	</department>
+	<department depno="DEP200" headssn="SSN2">
+		<name>Electrical and Electronics</name>
+	</department>
+	<course code="CODE1000" instructorssn="SSN1" depno="DEP100">
+		<name>Software Engineering2</name>
+		<hasprequisities code="CODE2000"/>
+	</course>
+	<course code="CODE2000" instructorssn="SSN3" depno="DEP100">
+		<name>Software Engineering</name>
+	</course>
+	<course code="CODE3000" instructorssn="SSN4" depno="DEP100">
+		<name>Computer Networks</name>
+		<hasprequisities code="CODE2000"/>
+	</course>
+	<course code="CODE4000" instructorssn="SSN2" depno="DEP200">
+		<name>Video Coding</name>
+	</course>
+</College>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="College">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="instructor" minOccurs="1" maxOccurs="unbounded">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1"/>
+								<xs:element name="address" minOccurs="1">
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element name="street" type="xs:string" minOccurs="1" maxOccurs="1"/>
+											<xs:element name="zipcode" type="xs:string" minOccurs="1" maxOccurs="1"/>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="salary" type="xs:string" minOccurs="1" maxOccurs="1"/>
+								<xs:element name="rank" type="xs:string" minOccurs="1" maxOccurs="1"/>
+								<xs:element name="degrees" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+							</xs:sequence>
+							<xs:attribute name="ssn" type="xs:ID" use="required"/>
+							<xs:attribute name="depno" type="xs:IDREF" use="required"/>
+						</xs:complexType>
+				</xs:element>
+				<xs:element name="department" minOccurs="1" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1"/>
+						</xs:sequence>
+						<xs:attribute name="depno" type="xs:ID" use="required"/>
+						<xs:attribute name="headssn" type="xs:IDREF" use="required"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="course" minOccurs="1" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1"/>
+							<xs:element name="hasprequisities" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:attribute name="code" type="xs:string"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="code" type="xs:ID" use="required"/>
+						<xs:attribute name="instructorssn" type="xs:IDREF" use="required"/>
+						<xs:attribute name="depno" type="xs:IDREF" use="required"/>
+					</xs:complexType>
+		</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
