@@ -1,9 +1,0 @@
-
-ATnTDataSet:
-svm_att_pca_lda_laplace
-Directly excute the required file changing the PCA LDA or Lap.
-
-HandWrittenDataSet:
-svm_att_hand_pca_lda_laplace
-Directly excute the required file changing the PCA LDA or Lap.
-
